@@ -1,0 +1,15 @@
+{
+  "processing_date": "2025-08-28T19:56:36.471073",
+  "total_pdfs": 49,
+  "successful": 49,
+  "failed": 0,
+  "total_questions": 231,
+  "by_semester": {
+    "fall19": 45,
+    "fall2018": 47,
+    "winter2021": 49,
+    "winter2022": 52,
+    "winter2023": 38
+  },
+  "output_file": "exam_questions.json"
+}
