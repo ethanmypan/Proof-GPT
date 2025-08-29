@@ -1,0 +1,8 @@
+{
+  "questions": [
+    "Consider the two programs Alg1(n): for i = 1 to n^3; for j = 1 to n; Print(j). And Alg2(n): for i = 1 to n^3; if i <= n then for j = 1 to n Print(j). For each program, give the asymptotic runtime as Θ(f(n)) and justify.",
+    "Sort the functions by asymptotic growth (slowest → fastest) and identify which have polynomial growth: a(n) = 2^{√(log n)}, b(n) = 2^{√n}, c(n) = 10^{10^{10}} · n^{0.01}, d(n) = 6^{log_2 n}, e(n) = n(1000 + √n)(1000 + n). Assume log base 2.",
+    "Question 3 (Graph Coloring). Let G be a finite graph with maximum degree ≤ d. Show that vertices can be assigned integers in {1, …, d+1} so adjacent vertices differ (hint: induction on the number of vertices).",
+    "Question 4 (Recurrence). T(1)=1 and T(n)=T(n−1)+n for n>1. (a) Prove T(n)=n(n+1)/2. (b) Explain the flaw in the “proof” that T(n)=O(n) by strong induction."
+  ]
+}

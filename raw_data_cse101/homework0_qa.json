@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Question 1 (Program Runtimes). Consider the two programs Alg1(n): for i = 1 to n^3; for j = 1 to n; Print(j). And Alg2(n): for i = 1 to n^3; if i <= n then for j = 1 to n Print(j). For each program, give the asymptotic runtime as \u0398(f(n)) and justify.",
+    "answer": "Alg1 runs the outer loop n^3 times and the inner loop n times, so total iterations are n^3 \u00b7 n = \u0398(n^4). Alg2 executes the inner loop only during the first n iterations of the outer loop, contributing \u0398(n \u00b7 n) = \u0398(n^2). For the remaining n^3 \u2212 n iterations, only the if-check runs, adding \u0398(n^3 \u2212 n) = \u0398(n^3). Combined, \u0398(n^2) + \u0398(n^3) = \u0398(n^3)."
+  },
+  {
+    "question": "Question 2 (Asymptotic Comparisons). Sort the functions by asymptotic growth (slowest \u2192 fastest) and identify which have polynomial growth: a(n) = 2^{\u221a(log n)}, b(n) = 2^{\u221an}, c(n) = 10^{10^{10}} \u00b7 n^{0.01}, d(n) = 6^{log_2 n}, e(n) = n(1000 + \u221an)(1000 + n). Assume log base 2.",
+    "answer": "Using log properties: log a(n) = \u221a(log n) \u21d2 sub-polynomial; log b(n) = \u221an \u21d2 super-polynomial. Compute orders: c(n) = \u0398(n^{0.01}); d(n) = 2^{(log_2 6)\u00b7log_2 n} = n^{log_2 6} \u2248 n^{2.585}; e(n) = \u0398(n \u00b7 \u221an \u00b7 n) = \u0398(n^{2.5}). Thus the ordering is a(n) \u226a c(n) \u226a e(n) \u226a d(n) \u226a b(n). Polynomial growth: c(n), d(n), e(n). Note: the large constant on c(n) delays crossover but is ignored asymptotically."
+  },
+  {
+    "question": "Question 3 (Graph Coloring). Let G be a finite graph with maximum degree \u2264 d. Show that vertices can be assigned integers in {1, \u2026, d+1} so adjacent vertices differ (hint: induction on the number of vertices).",
+    "answer": "Order vertices 1,\u2026,n and let G_i be the subgraph on {1,\u2026,i}. Base: i=1 is trivial. Inductive step: assume G_{i\u22121} has a valid coloring using {1,\u2026,d+1}. Vertex i has at most d neighbors, so at least one color in {1,\u2026,d+1} is unused by its neighbors; assign that color to i to extend the coloring. By induction, G_n (i.e., G) is properly colored with d+1 colors."
+  },
+  {
+    "question": "Question 4 (Recurrence). T(1)=1 and T(n)=T(n\u22121)+n for n>1. (a) Prove T(n)=n(n+1)/2. (b) Explain the flaw in the \u201cproof\u201d that T(n)=O(n) by strong induction.",
+    "answer": "(a) Induction: Assume T(n\u22121)=(n\u22121)n/2. Then T(n)=T(n\u22121)+n=(n\u22121)n/2 + n = n(n+1)/2. Base cases hold, so the formula is proven. (b) Big-O requires an absolute constant C with T(n) \u2264 C\u00b7n for all n. From T(n+1)=T(n)+(n+1) \u2264 C\u00b7n + (n+1) = (C+1)\u00b7n + 1, the implied constant grows with n (C\u2192C+1), so it isn\u2019t an absolute constant. The inductive step doesn\u2019t preserve the same constant, so the proof is invalid."
+  }
+]
